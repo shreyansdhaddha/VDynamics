@@ -1,0 +1,29 @@
+﻿<html>
+<head>
+    <title>Help</title>
+</head>
+<body>
+	<a href = "@Url.Action("Index", "Home")"><span>Home</span></a>
+    <span>> Help</span>
+		
+	<h2>Help</h2>
+
+    <h3>List: Countries</h3>
+    <ul>
+    <p>Way one:</p>
+    @foreach (string country in ViewBag.Countries)
+    {
+        <li>@country</li>
+    }
+    </ul>
+    <ul>
+    <p>Way two:</p>
+    @foreach (var country in ViewBag.Countries)
+    {
+        <li>
+        @Html.DisplayFor(modelItem => country)
+        </li>
+    }  
+    </ul>
+</body>
+</html>
